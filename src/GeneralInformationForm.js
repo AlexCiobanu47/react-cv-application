@@ -39,27 +39,29 @@ class GeneralInformationForm extends Component{
         return(
             <div>
                 <form onSubmit={this.onSubmitInfo}>
-                    <label htmlFor="">First name:</label>
-                    <input
-                        type = 'text'
-                        onChange={this.handleFirstNameChange}
-                    />
-                    <label htmlFor="">Last name:</label>
-                    <input
-                        type = 'text'
-                        onChange={this.handleLastNameChange}
-                    />
-                    <label htmlFor="">Email:</label>
-                    <input
-                        type = 'email'
-                        onChange={this.handleEmailChange}
-                    />
-                    <label htmlFor="">Phone number:</label>
-                    <input
-                        type = 'text'
-                        onChange={this.handlePhoneChange}
-                    />
-                    <button type = 'submit'>Submit</button>
+                    <fieldset>
+                        <label htmlFor="">First name:</label>
+                        <input
+                            type = 'text'
+                            onChange={this.handleFirstNameChange}
+                        />
+                        <label htmlFor="">Last name:</label>
+                        <input
+                            type = 'text'
+                            onChange={this.handleLastNameChange}
+                        />
+                        <label htmlFor="">Email:</label>
+                        <input
+                            type = 'email'
+                            onChange={this.handleEmailChange}
+                        />
+                        <label htmlFor="">Phone number:</label>
+                        <input
+                            type = 'text'
+                            onChange={this.handlePhoneChange}
+                        />
+                        <button type = 'submit'>Submit</button>
+                    </fieldset>
                 </form>
                 <GeneralInformationDisplay 
                     firstName = {this.state.firstName}

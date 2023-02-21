@@ -30,24 +30,26 @@ class GeneralInformationForm extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="Education">
                 <form onSubmit={this.onSubmitInfo}>
-                    <label htmlFor="">School:</label>
-                    <input
-                        type = 'text'
-                        onChange={this.handleSchoolChange}
-                    />
-                    <label htmlFor="">School start date:</label>
-                    <input
-                        type = 'date'
-                        onChange={this.handleSchoolStartDateChange}
-                    />
-                    <label htmlFor="">School end date:</label>
-                    <input
-                        type = 'date'
-                        onChange={this.handleSchoolEndDateChange}
-                    />
-                    <button type = 'submit'>Submit</button>
+                    <fieldset>
+                        <label htmlFor="">School:</label>
+                        <input
+                            type = 'text'
+                            onChange={this.handleSchoolChange}
+                        />
+                        <label htmlFor="">School start date:</label>
+                        <input
+                            type = 'date'
+                            onChange={this.handleSchoolStartDateChange}
+                        />
+                        <label htmlFor="">School end date:</label>
+                        <input
+                            type = 'date'
+                            onChange={this.handleSchoolEndDateChange}
+                        />
+                        <button type = 'submit'>Submit</button>
+                    </fieldset>
                 </form>
                 <EducationDisplay 
                     school = {this.state.school}
