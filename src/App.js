@@ -1,4 +1,5 @@
 import { Component } from "react";
+import EducationForm from "./EducationForm";
 import GeneralInformationForm from "./GeneralInformationForm";
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <GeneralInformationForm/>
+        <EducationForm/>
       </div>
     );
   }
