@@ -53,19 +53,19 @@ class GeneralInformationForm extends Component{
             <div className="general-info">
                 <div className="header">Resume</div>
                 <div className="firstName">
-                    <h2>First name</h2>
+                    <h2>First name:</h2>
                     <p>{firstName ? firstName : 'your first name'}</p>
                 </div>
                 <div className="lastName">
-                    <h2>Last Name</h2>
+                    <h2>Last Name:</h2>
                     <p>{lastName ? lastName :'your last name'}</p>
                 </div>
                 <div>
-                    <h2>Email</h2>
+                    <h2>Email:</h2>
                     <p>{email ? email : 'your email'}</p>
                 </div>
                 <div>
-                    <h2>Phone</h2>
+                    <h2>Phone:</h2>
                     <p>{phone ? phone :'your phone'}</p>
                 </div>
                 <button
