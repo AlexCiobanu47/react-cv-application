@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AlexCiobanu47/react-cv-application/static/css/main.812c521c.css",
+    "main.js": "/AlexCiobanu47/react-cv-application/static/js/main.951597bc.js",
+    "static/media/cv-background.jpg": "/AlexCiobanu47/react-cv-application/static/media/cv-background.6e059d78e70011b8ce1c.jpg",
+    "index.html": "/AlexCiobanu47/react-cv-application/index.html",
+    "main.812c521c.css.map": "/AlexCiobanu47/react-cv-application/static/css/main.812c521c.css.map",
+    "main.951597bc.js.map": "/AlexCiobanu47/react-cv-application/static/js/main.951597bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.812c521c.css",
+    "static/js/main.951597bc.js"
+  ]
+}
