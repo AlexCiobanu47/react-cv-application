@@ -51,33 +51,36 @@ class GeneralInformationForm extends Component{
         } = this.state;
         return(
             <div className="general-info">
-                <div className="header">Resume</div>
-                <div className="firstName">
-                    <h2>First name:</h2>
-                    <p>{firstName ? firstName : 'your first name'}</p>
-                </div>
-                <div className="lastName">
-                    <h2>Last Name:</h2>
-                    <p>{lastName ? lastName :'your last name'}</p>
-                </div>
-                <div>
-                    <h2>Email:</h2>
-                    <p>{email ? email : 'your email'}</p>
-                </div>
-                <div>
-                    <h2>Phone:</h2>
-                    <p>{phone ? phone :'your phone'}</p>
-                </div>
-                <button
-                    type = "button"
-                    onClick={this.toggleEdit}
-                >
+                <div className="inputInfo">
+                    <div className="firstName">
+                        <h2>First name:</h2>
+                        <p>{firstName ? firstName : 'your first name'}</p>
+                    </div>
+                    <div className="lastName">
+                        <h2>Last Name:</h2>
+                        <p>{lastName ? lastName :'your last name'}</p>
+                    </div>
+                    <div>
+                        <h2>Email:</h2>
+                        <p>{email ? email : 'your email'}</p>
+                    </div>
+                    <div>
+                        <h2>Phone:</h2>
+                        <p>{phone ? phone :'your phone'}</p>
+                    </div>
+                    <button
+                        type = "button"
+                        className="edit-button"
+                        onClick={this.toggleEdit}
+                    >
                     Edit
-                </button>
+                    </button>
+                </div> 
+                    
                 {edit &&
                     <div> 
                         <form onSubmit={this.onSubmitInfo}>
-                            <fieldset>
+                            <fieldset className="general-info-form">
                                 <label htmlFor="">First name:</label>
                                 <input
                                     type = 'text'
@@ -102,7 +105,12 @@ class GeneralInformationForm extends Component{
                                     onChange={this.handlePhoneChange}
                                     value = {phone}
                                 />
-                                <button type = 'submit'>Submit</button>
+                                <button 
+                                    type = 'submit'
+                                    className="submit-button"
+                                    >
+                                        Submit
+                                </button>
                             </fieldset>
                         </form> 
                     </div>

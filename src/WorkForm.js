@@ -50,32 +50,35 @@ class WorkForm extends Component{
         } = this.state
         return(
             <div className="work-info">
-                <div className="company-name">
-                    <h2>Company:</h2>
-                    <p>{company ? company: 'your company name'}</p>
+                <div className="work-input">
+                    <div className="company-name">
+                        <h2>Company:</h2>
+                        <p>{company ? company: 'your company name'}</p>
+                    </div>
+                    <div className="position-title">
+                        <h2>Title:</h2>
+                        <p>{title ? title :'your title'}</p>
+                    </div>
+                    <div className="work-start">
+                        <h2>Work start date:</h2>
+                        <p>{workStartDate ? workStartDate : 'your work start date'}</p>
+                    </div>
+                    <div className="work-end">
+                        <h2>Work end date:</h2>
+                        <p>{workEndDate ? workEndDate :'your work end date'}</p>
+                    </div>
+                    <button
+                        type = "button"
+                        className="edit-button"
+                        onClick={this.toggleEdit}
+                    >
+                        Edit
+                    </button>
                 </div>
-                <div className="position-title">
-                    <h2>Title:</h2>
-                    <p>{title ? title :'your title'}</p>
-                </div>
-                <div className="work-start">
-                    <h2>Work start date:</h2>
-                    <p>{workStartDate ? workStartDate : 'your work start date'}</p>
-                </div>
-                <div className="work-end">
-                    <h2>Work end date:</h2>
-                    <p>{workEndDate ? workEndDate :'your work end date'}</p>
-                </div>
-                <button
-                    type = "button"
-                    onClick={this.toggleEdit}
-                >
-                    Edit
-                </button>
                 {edit &&
                     <div>
                         <form onSubmit={this.onSubmitInfo}>
-                            <fieldset>
+                            <fieldset className="work-form">
                                 <label htmlFor="">Company:</label>
                                 <input
                                     type = 'text'
@@ -96,7 +99,12 @@ class WorkForm extends Component{
                                     type = 'date'
                                     onChange={this.handleWorkEndDate}
                                 />
-                                <button type = 'submit'>Submit</button>
+                                <button 
+                                    type = 'submit'
+                                    className="submit-button"
+                                    >
+                                        Submit
+                                </button>
                             </fieldset>
                         </form>
                     </div>

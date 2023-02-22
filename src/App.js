@@ -1,15 +1,14 @@
 import { Component } from "react";
-import EducationForm from "./EducationForm";
-import GeneralInformationForm from "./GeneralInformationForm";
-import WorkForm from "./WorkForm";
+import Resume from "./Resume";
+import Side from "./Side";
+import './App.css';
 class App extends Component {
 
   render(){
     return (
       <div className="App">
-        <GeneralInformationForm/>
-        <EducationForm/>
-        <WorkForm/>
+        <Side/>
+        <Resume/>
       </div>
     );
   }

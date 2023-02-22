@@ -43,28 +43,31 @@ class GeneralInformationForm extends Component{
         } = this.state;
         return(
             <div className="edu-info">
-                <div className="school">
-                    <h2>School:</h2>
-                    <p>{school ? school : 'your school'}</p>
+                <div className="edu-input">
+                    <div className="school">
+                        <h2>School:</h2>
+                        <p>{school ? school : 'your school'}</p>
+                    </div>
+                    <div className="school-start">
+                        <h2>School start date:</h2>
+                        <p>{schoolStartDate ? schoolStartDate :'your school start date'}</p>
+                    </div>
+                    <div className="school-end">
+                        <h2>School end date:</h2>
+                        <p>{schoolEndDate ? schoolEndDate : 'your school end date'}</p>
+                    </div>
+                    <button
+                        type = "button"
+                        className="edit-button"
+                        onClick={this.toggleEdit}
+                    >
+                        Edit
+                    </button>
                 </div>
-                <div className="school-start">
-                    <h2>School start date:</h2>
-                    <p>{schoolStartDate ? schoolStartDate :'your school start date'}</p>
-                </div>
-                <div className="school-end">
-                    <h2>School end date:</h2>
-                    <p>{schoolEndDate ? schoolEndDate : 'your school end date'}</p>
-                </div>
-                <button
-                    type = "button"
-                    onClick={this.toggleEdit}
-                >
-                    Edit
-                </button>
                 {edit &&
                     <div>
                         <form onSubmit={this.onSubmitInfo}>
-                            <fieldset>
+                            <fieldset className="edu-form">
                                 <label htmlFor="">School:</label>
                                 <input
                                     type = 'text'
@@ -80,7 +83,12 @@ class GeneralInformationForm extends Component{
                                     type = 'date'
                                     onChange={this.handleSchoolEndDateChange}
                                 />
-                                <button type = 'submit'>Submit</button>
+                                <button 
+                                    type = 'submit'
+                                    className="submit-button"
+                                    >
+                                        Submit
+                                </button>
                             </fieldset>
                         </form>
                     </div>

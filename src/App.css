@@ -1,0 +1,59 @@
+/*reset*/
+
+.header{
+    text-align: center;
+}
+.App{
+    width: 60rem;
+    margin: 0 auto;
+    padding: 30px;
+    background-image: url("images/cv-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:black;
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+}
+.side{
+    background-color: #00000077;
+    color: white;
+    padding: 1rem;
+}
+.resume{
+    background-color:#ffffff77;
+    color:black;
+    padding: 1rem;
+}
+.edit-button, .submit-button{
+    background-color: transparent;
+    border: 1px solid black;
+}
+.general-info{
+    display: flex;
+    flex-direction: column;
+}
+.general-info-form{
+    display: flex;
+    flex-direction: column;
+}
+.edu-info{
+    display: flex;
+    flex-direction: column;
+}
+.edu-form{
+    display: flex;
+    flex-direction: column;
+}
+.work-info{
+    display: flex;
+    flex-direction: column;
+}
+.work-form{
+    display: flex;
+    flex-direction: column;
+}
+.skills-info{
+    display: flex;
+    flex-direction: column;
+}
