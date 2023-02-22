@@ -51,7 +51,7 @@ class GeneralInformationForm extends Component{
                     <h2>School start date:</h2>
                     <p>{schoolStartDate ? schoolStartDate :'your school start date'}</p>
                 </div>
-                <div>
+                <div className="school-end">
                     <h2>School end date:</h2>
                     <p>{schoolEndDate ? schoolEndDate : 'your school end date'}</p>
                 </div>
