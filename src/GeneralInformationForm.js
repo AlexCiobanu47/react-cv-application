@@ -1,5 +1,4 @@
 import React , {Component} from "react";
-import GeneralInformationDisplay from "./GeneralInformationDisplay";
 
 class GeneralInformationForm extends Component{
     constructor(){
@@ -10,6 +9,7 @@ class GeneralInformationForm extends Component{
             lastName: '',
             email: '',
             phone: '',
+            edit: '',
         };
     }
     handleFirstNameChange =(e) => {
@@ -34,41 +34,79 @@ class GeneralInformationForm extends Component{
     };
     onSubmitInfo = (e) =>{
         e.preventDefault();
+        this.toggleEdit();
+    }
+    toggleEdit = (e) =>{
+        this.setState(prevState =>({
+            edit: !prevState.edit
+        }))
     }
     render(){
+        const {
+            firstName,
+            lastName,
+            email,
+            phone,
+            edit,
+        } = this.state;
         return(
-            <div>
-                <form onSubmit={this.onSubmitInfo}>
-                    <fieldset>
-                        <label htmlFor="">First name:</label>
-                        <input
-                            type = 'text'
-                            onChange={this.handleFirstNameChange}
-                        />
-                        <label htmlFor="">Last name:</label>
-                        <input
-                            type = 'text'
-                            onChange={this.handleLastNameChange}
-                        />
-                        <label htmlFor="">Email:</label>
-                        <input
-                            type = 'email'
-                            onChange={this.handleEmailChange}
-                        />
-                        <label htmlFor="">Phone number:</label>
-                        <input
-                            type = 'text'
-                            onChange={this.handlePhoneChange}
-                        />
-                        <button type = 'submit'>Submit</button>
-                    </fieldset>
-                </form>
-                <GeneralInformationDisplay 
-                    firstName = {this.state.firstName}
-                    lastName = {this.state.lastName}
-                    email = {this.state.email}
-                    phone = {this.state.phone}
-                />
+            <div className="general-info">
+                <div className="header">Resume</div>
+                <div className="firstName">
+                    <h2>First name</h2>
+                    <p>{firstName ? firstName : 'your first name'}</p>
+                </div>
+                <div className="lastName">
+                    <h2>Last Name</h2>
+                    <p>{lastName ? lastName :'your last name'}</p>
+                </div>
+                <div>
+                    <h2>Email</h2>
+                    <p>{email ? email : 'your email'}</p>
+                </div>
+                <div>
+                    <h2>Phone</h2>
+                    <p>{phone ? phone :'your phone'}</p>
+                </div>
+                <button
+                    type = "button"
+                    onClick={this.toggleEdit}
+                >
+                    Edit
+                </button>
+                {edit &&
+                    <div> 
+                        <form onSubmit={this.onSubmitInfo}>
+                            <fieldset>
+                                <label htmlFor="">First name:</label>
+                                <input
+                                    type = 'text'
+                                    onChange={this.handleFirstNameChange}
+                                    value = {firstName}
+                                />
+                                <label htmlFor="">Last name:</label>
+                                <input
+                                    type = 'text'
+                                    onChange={this.handleLastNameChange}
+                                    value = {lastName}
+                                />
+                                <label htmlFor="">Email:</label>
+                                <input
+                                    type = 'email'
+                                    onChange={this.handleEmailChange}
+                                    value = {email}
+                                />
+                                <label htmlFor="">Phone number:</label>
+                                <input
+                                    type = 'text'
+                                    onChange={this.handlePhoneChange}
+                                    value = {phone}
+                                />
+                                <button type = 'submit'>Submit</button>
+                            </fieldset>
+                        </form> 
+                    </div>
+                }
             </div>
         )
     }
