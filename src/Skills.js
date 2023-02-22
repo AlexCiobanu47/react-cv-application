@@ -55,7 +55,11 @@ class Skills extends Component{
                             {skills.map(skill =>{
                                 return(
                                     <li key = {skill.id}>{skill.skill}
-                                        <button onClick={() => this.handleSkillRemove(skill.id)}>Remove</button>
+                                        <button 
+                                            onClick={() => this.handleSkillRemove(skill.id)}
+                                            className = 'remove-skill-button'
+                                            >
+                                                Remove</button>
                                     </li>
                                     
                                 )
@@ -64,10 +68,10 @@ class Skills extends Component{
                     </div>
                     <button
                         type = "button"
-                        className="edit-button"
+                        className="skill-edit-button"
                         onClick={this.toggleEdit}
                     >
-                        Add
+                        Edit
                     </button>
                 </div>
                 {edit &&
@@ -85,7 +89,7 @@ class Skills extends Component{
                                     className="add-skill-button"
                                     onClick={this.onSubmitSkill}
                                     >
-                                        Submit
+                                        Add
                                 </button>
                             </fieldset>
                         </form>
