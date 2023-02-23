@@ -58,7 +58,7 @@ class GeneralInformationForm extends Component{
                     </div>
                     <button
                         type = "button"
-                        className="edit-button"
+                        className="education-edit-button"
                         onClick={this.toggleEdit}
                     >
                         Edit
@@ -85,7 +85,8 @@ class GeneralInformationForm extends Component{
                                 />
                                 <button 
                                     type = 'submit'
-                                    className="submit-button"
+                                    className="edu-submit-button"
+                                    onClick={this.onSubmitInfo}
                                     >
                                         Submit
                                 </button>

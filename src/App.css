@@ -1,4 +1,4 @@
-/*reset*/
+
 
 .header{
     text-align: center;
@@ -25,22 +25,31 @@
     color:black;
     padding: 1rem;
 }
-.edit-button, .submit-button{
+.edu-submit-button, .work-submit-button{
     background-color: transparent;
     border: 1px solid black;
+}
+.general-submit-button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
 }
 .general-info{
     display: flex;
     flex-direction: column;
 }
+.general-info:hover .general-edit-button{
+    display: block;
+}
 .general-info-form{
     display: flex;
     flex-direction: column;
 }
-.general-edit-button, .general-submit-button{
+.general-edit-button{
     border: 1px solid white;
     background-color: transparent;
     color: white;
+    display: none;
 }
 /*education*/
 .edu-info{
@@ -51,6 +60,14 @@
     display: flex;
     flex-direction: column;
 }
+.education-edit-button{
+    background-color: transparent;
+    border: 1px solid black;
+    display: none;
+}
+.edu-info:hover .education-edit-button{
+    display: block;
+}
 /*work*/
 .work-info{
     display: flex;
@@ -59,6 +76,14 @@
 .work-form{
     display: flex;
     flex-direction: column;
+}
+.work-edit-button{
+    background-color: transparent;
+    border: 1px solid black;
+    display: none;
+}
+.work-info:hover .work-edit-button{
+    display: block;
 }
 /*skills*/
 .skills-info{
@@ -74,4 +99,8 @@
     background-color: transparent;
     color:white;
     border: 1px solid white;
+    display: none;
+}
+.skills-info:hover .skill-edit-button{
+    display: block;
 }

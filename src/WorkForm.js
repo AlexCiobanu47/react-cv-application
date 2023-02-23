@@ -69,7 +69,7 @@ class WorkForm extends Component{
                     </div>
                     <button
                         type = "button"
-                        className="edit-button"
+                        className="work-edit-button"
                         onClick={this.toggleEdit}
                     >
                         Edit
@@ -101,7 +101,8 @@ class WorkForm extends Component{
                                 />
                                 <button 
                                     type = 'submit'
-                                    className="submit-button"
+                                    className="work-submit-button"
+                                    onClick={this.onSubmitInfo}
                                     >
                                         Submit
                                 </button>
